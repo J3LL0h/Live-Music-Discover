@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Find live music and upcoming concerts near you.">
+  <title>Live Music Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <main>
+    <header class="masthead">
+      <p class="eyebrow">THE NIGHT IS YOURS</p>
+      <h1 class="brand">Find your<br><span>next show.</span></h1>
+      <p class="tagline">Start the search for your next memorable night</p>
+    </header>
+
+    <form id="searchForm" class="search-form" autocomplete="off" role="search">
+      <div class="search-row">
+        <label class="sr-only" for="searchText">Search artists, venues, or events... </label>
+        <span class="search-mark" aria-hidden="true">&#9906;</span>
+        <input id="searchText" name="keyword" placeholder="Artist, venue, or event" type="search">
+        <button type="submit" aria-label="Search events">Search <span aria-hidden="true"></span></button>
+      </div>
+      <div class="filter-row" aria-label="Optional event filters">
+        <label class="filter-field" for="cityFilter">
+          <span>City</span>
+          <input id="cityFilter" name="city" placeholder="Any city" type="text">
+        </label>
+        <label class="filter-field" for="genreFilter">
+          <span>Genre</span>
+          <input id="genreFilter" name="genre" placeholder="e.g. Rock, Jazz" type="text">
+        </label>
+      </div>
+    </form>
+
+    <section class="results-wrap" aria-live="polite" aria-label="Concert search results">
+      <div class="results-heading">
+        <span class="eyebrow"> WHAT'S SHOWING</span>
+        <span class="results-rule" aria-hidden="true"></span>
+      </div>
+      <section id="results" aria-label="Events">
+        <!-- Search results appear here. -->
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
